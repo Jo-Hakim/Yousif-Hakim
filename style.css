@@ -149,9 +149,9 @@ nav ul li a:active{
 
 .content h1 {
     color: #1f1f25;
-    font-size: 75px;
-    font-weight: 900;
-    line-height: 90px;
+    font-size: 25px;
+    font-weight: 200;
+    line-height: 30px;
     text-transform: inherit;
     width: 70%;
 }
