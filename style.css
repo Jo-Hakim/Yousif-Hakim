@@ -39,11 +39,12 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 30px 100px;
-    background: rgba(0, 0, 0, 0.5);
+    
     width: 100%;
     position: fixed;
     top: 0;
     z-index: 1;
+    margin-bottom: 20px;
 }
 
 .logo {
@@ -192,6 +193,10 @@ nav ul li a:active{
 .the-projects{
     display: flex;
     gap: 5px;
+    flex-wrap:nowrap;
+    overflow-x: scroll;
+    scrollbar-width: 4px;
+    scrollbar-color: red;
 }
 #services{
     background-image: url(https://img.freepik.com/free-vector/digital-white-background-with-binary-code-numbers_1017-25335.jpg);
@@ -225,7 +230,7 @@ nav ul li a:active{
     border-radius: 50%;
 }
 /* Add this to your existing style.css */
-@media only screen and (max-width: 240px) {
+@media only screen and (max-width: 77mm) {
     body {
         font-size: 12px;
     }
@@ -268,4 +273,9 @@ nav ul li a:active{
     .project p {
         font-size: 12px;
     }
+}
+.section{
+    overflow-y: scroll;
+    scrollbar-width: 4px;
+    scrollbar-color: red;
 }
