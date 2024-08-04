@@ -181,7 +181,7 @@ nav ul li a:active{
 .project {
     border: 1px solid black;
     width: 260px;
-    height: 450px;
+    height: 500px;
     display: flex;
     flex-flow: column nowrap ;
     align-items: center;
