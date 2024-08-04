@@ -178,8 +178,8 @@ nav ul li a:active{
 }
 .project {
     border: 1px solid black;
-    width: 370px;
-    height: 555px;
+    width: 260px;
+    height: 450px;
     display: flex;
     flex-flow: column nowrap ;
     align-items: center;
@@ -187,7 +187,7 @@ nav ul li a:active{
     justify-content: space-between;
 }
 .project img{
-    height: 230px;
+    height: 150px;
     width: 100%;
 }
 .the-projects{
@@ -196,9 +196,7 @@ nav ul li a:active{
     flex-wrap:nowrap;
     scrollbar-width: 4px;
     scrollbar-color: red;
-    overflow-x: scroll;
-    scroll-snap-type: proximity;
-    scroll-behavior: smooth;
+    
 }
 #services{
     background-image: url(https://img.freepik.com/free-vector/digital-white-background-with-binary-code-numbers_1017-25335.jpg);
