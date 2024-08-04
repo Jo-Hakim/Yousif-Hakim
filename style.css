@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+#hero, #projects {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: none;
+    background-repeat: no-repeat;
+}
+
+#hero {
+    background-image: url('//static-ssl.businessinsider.com/image/55379b8becad047f4e8fddb3-960/6180104944_73e0a291aa_b.jpg');
+}
+
+#projects {
+    background-image: url('https://tse3.mm.bing.net/th?id=OIP._mYBFudvvFFha4mAVWvM5AHaEK&pid=Api&P=0&h=220');
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 100px;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+.logo {
+    max-height: 60px;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+nav ul li a {
+    color: white;
+    position: relative;
+    padding: 5px 0;
+}
+
+nav ul li a:hover {
+    color: greenyellow;
+}
+
+nav ul li a:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: blue;
+    transition: 0.3s;
+    bottom: 0;
+}
+
+nav ul li a:hover:after {
+    width: 100%;
+}
+nav ul li a:active{
+    color: white;
+}
+
+.btn {
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 16px 40px;
+    border-radius: 500px;
+    display: inline-block;
+    font-weight: 500;
+    transition: all 0.4s ease-in-out;
+    background: blue;
+    border: 2px solid greenyellow;
+}
+
+.btn:hover {
+    background: transparent;
+    border-color: greenyellow;
+    color: blue;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    z-index: 2;
+    color: #fff;
+}
+
+.content .title {
+    color: #0a0a0a;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    display: inline-block;
+    margin-bottom: 20px;
+    background: linear-gradient(
+        120deg,
+        #1c99fe 20.69%,
+        #7644ff 50.19%,
+        greenyellow 79.69%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.title3{
+    color: #0a0a0a;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    display: inline-block;
+    margin-bottom: 20px;
+    background: linear-gradient(
+        120deg,
+        blue 20.69%,
+        purple 50.19%,
+        green 79.69%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.content h1 {
+    color: #1f1f25;
+    font-size: 75px;
+    font-weight: 900;
+    line-height: 90px;
+    text-transform: inherit;
+    width: 70%;
+}
+
+.content h1 span {
+    color: greenyellow;
+}
+
+.content p {
+    width: 55%;
+    color: #202020;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.section {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+#projects .content{
+    margin-top: 30px;
+}
+.project {
+    border: 1px solid black;
+    width: 370px;
+    height: 555px;
+    display: flex;
+    flex-flow: column nowrap ;
+    align-items: center;
+    color: #0a0a0a;
+    justify-content: space-between;
+}
+.project img{
+    height: 230px;
+    width: 100%;
+}
+.the-projects{
+    display: flex;
+    gap: 5px;
+}
+#services{
+    background-image: url(https://img.freepik.com/free-vector/digital-white-background-with-binary-code-numbers_1017-25335.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: none;
+    width: 100%;
+    height: 100vh;
+}
+#contact{
+    background-image: url(https://tse3.mm.bing.net/th?id=OIP.gfTSNghWIo4CE6fjoKW0fwHaGl&pid=Api&P=0&h=220);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: none;
+    width: 100%;
+    height: 100vh;
+}
+#gmail:hover{
+    color: whitesmoke;
+    background-color: orangered;
+
+}
+#whats:hover{
+    color: greenyellow;
+}
+#face:hover{
+    background-color:white ;
+    color: #3b5998;
+    border-radius: 50%;
+}
+/* Add this to your existing style.css */
+@media only screen and (max-width: 240px) {
+    body {
+        font-size: 12px;
+    }
+
+    nav ul {
+        display: block;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: inline-block;
+        margin: 0 5px;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .content h1 {
+        font-size: 18px;
+    }
+
+    .content p {
+        font-size: 12px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    .project {
+        margin-bottom: 10px;
+    }
+
+    .project h3 {
+        font-size: 14px;
+    }
+
+    .project p {
+        font-size: 12px;
+    }
+}
