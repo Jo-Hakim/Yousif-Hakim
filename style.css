@@ -39,7 +39,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 30px 100px;
-    
+    order: -1;
     width: 100%;
     position: fixed;
     top: 0;
@@ -149,9 +149,9 @@ nav ul li a:active{
 
 .content h1 {
     color: #1f1f25;
-    font-size: 25px;
-    font-weight: 200;
-    line-height: 30px;
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 40px;
     text-transform: inherit;
     width: 70%;
 }
@@ -194,9 +194,11 @@ nav ul li a:active{
     display: flex;
     gap: 5px;
     flex-wrap:nowrap;
-    overflow-x: scroll;
     scrollbar-width: 4px;
     scrollbar-color: red;
+    overflow-x: scroll;
+    scroll-snap-type: proximity;
+    scroll-behavior: smooth;
 }
 #services{
     background-image: url(https://img.freepik.com/free-vector/digital-white-background-with-binary-code-numbers_1017-25335.jpg);
