@@ -18,3 +18,27 @@ function showContent(id) {
 document.addEventListener('DOMContentLoaded', () => {
     showContent('hero');
 });
+let currentProjectIndex = 0;
+
+function showProject(index) {
+    const projects = document.querySelectorAll('.project2');
+    projects.forEach((project2, i) => {
+        project2.classList.toggle('active', i === index);
+    });
+}
+
+function showNextProject() {
+    const projects = document.querySelectorAll('.project2');
+    currentProjectIndex = (currentProjectIndex + 1) % projects.length;
+    showProject(currentProjectIndex);
+}
+
+function showPreviousProject() {
+    const projects = document.querySelectorAll('.project2');
+    currentProjectIndex = (currentProjectIndex - 1 + projects.length) % projects.length;
+    showProject(currentProjectIndex);
+}
+
+// Initially show the first project
+showProject(currentProjectIndex);
+

@@ -178,7 +178,7 @@ nav ul li a:active{
 #projects .content{
     margin-top: 30px;
 }
-.project {
+.project,.project2 {
     border: 1px solid black;
     width: 300px;
     height: 450px;
@@ -188,11 +188,11 @@ nav ul li a:active{
     color: #0a0a0a;
     justify-content: space-between;
 }
-.project img{
+.project img,.project2 img{
     height: 120px;
     width: 100%;
 }
-.the-projects{
+.the-projects,.the-projects2{
     display: flex;
     gap: 5px;
     flex-wrap:nowrap;
@@ -264,15 +264,15 @@ nav ul li a:active{
         padding: 5px 10px;
     }
 
-    .project {
+    .project,.project2 {
         margin-bottom: 10px;
     }
 
-    .project h3 {
+    .project h3,.project2 h3 {
         font-size: 14px;
     }
 
-    .project p {
+    .project p,.project2 p {
         font-size: 12px;
     }
 }
@@ -281,3 +281,38 @@ nav ul li a:active{
     scrollbar-width: 4px;
     scrollbar-color: red;
 }
+.projects-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+   
+}
+
+.nav-arrow {
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.nav-arrow:hover {
+    color: greenyellow;
+}
+
+.the-projects2 {
+    display: flex;
+    overflow: hidden;
+    width: 100%; /* Adjust width as needed */
+    justify-content: center;
+    max-width: 900px;
+}
+
+.project2 {
+    display: none; /* Hide all projects by default */
+}
+
+.project2.active {
+    display: block; /* Show the active project */
+}
+
