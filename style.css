@@ -231,6 +231,46 @@ nav ul li a:active{
     color: #3b5998;
     border-radius: 50%;
 }
+.section{
+    overflow-y: scroll;
+    scrollbar-width: 4px;
+    scrollbar-color: red;
+}
+.projects-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+   
+}
+
+.nav-arrow {
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.nav-arrow:hover {
+    color: greenyellow;
+}
+
+.the-projects2 {
+    display: flex;
+    overflow: hidden;
+    width: 100%; /* Adjust width as needed */
+    justify-content: center;
+    max-width: 900px;
+}
+
+.project2 {
+    display: none; 
+    
+}
+
+.project2.active {
+    display: block; /* Show the active project */
+}
 /* Add this to your existing style.css */
 @media only screen and (max-width: 77mm) {
     /* Adjustments for screens up to 77mm wide */
