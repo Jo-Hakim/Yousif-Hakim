@@ -10,17 +10,19 @@
     <link rel="icon" href="https://tse1.mm.bing.net/th?id=OIP.f7DfmwJIlI2gJoyqqdNWOQHaEO&pid=Api&P=0&h=220" type="image/jpeg" sizes="24*16"> 
 </head>
 <body>
-    <div id="hero" class="section">
-        <nav>
-            <img src="https://tse1.mm.bing.net/th?id=OIP.f7DfmwJIlI2gJoyqqdNWOQHaEO&pid=Api&P=0&h=220" class="logo" />
-            <ul>
-                <li><a href="#hero" onclick="showContent('hero')">Home</a></li>
-                <li><a href="#projects" onclick="showContent('projects')">Projects</a></li>
-                <li><a href="#services" onclick="showContent('services')">Services</a></li>
-                <li><a href="#contact" onclick="showContent('contact')">Contact</a></li>
-            </ul>
-            <a href="#projects" class="btn" onclick="showContent('projects')">Resume</a>
-        </nav>
+    <nav>
+        <img src="https://tse1.mm.bing.net/th?id=OIP.f7DfmwJIlI2gJoyqqdNWOQHaEO&pid=Api&P=0&h=220" class="logo" />
+        <div class="clock"></div>
+        <ul>
+            <li><a href="#" onclick="showContent('home')">Home</a></li>
+            <li><a href="#" onclick="showContent('projects')">Projects</a></li>
+            <li><a href="#" onclick="showContent('services')">Services</a></li>
+            <li><a href="#" onclick="showContent('contact')">Contact</a></li>
+        </ul>
+        
+    </nav>
+    <div id="home" class="section">
+        
         <div class="content">
             <span class="title">Freelance Web Developer</span>
             <h1>Hello, I’m <span>Yousif</span></h1>
@@ -30,23 +32,14 @@
     </div>
 
     <div id="projects" class="section">
-        <nav>
-            <img src="https://tse1.mm.bing.net/th?id=OIP.f7DfmwJIlI2gJoyqqdNWOQHaEO&pid=Api&P=0&h=220" class="logo" />
-            <ul>
-                <li><a href="#hero" onclick="showContent('hero')">Home</a></li>
-                <li><a href="#projects" onclick="showContent('projects')">Projects</a></li>
-                <li><a href="#services" onclick="showContent('services')">Services</a></li>
-                <li><a href="#contact" onclick="showContent('contact')">Contact</a></li>
-            </ul>
-            <a href="#services" class="btn" onclick="showContent('services')">Resume</a>
-        </nav>
-        <div class="content">
+        
+        <div class="content" style="width: 100%;">
             <span class="title">My Projects</span>
-            <h1>I've built a lot of</h1><h1>projects</h1>
+            <h1>I've built a lot of projects</h1>
             <p style="color: white;">Here are some of the most important projects that I've built:</p>
             <center>
-            <div class="projects-container" style="display: flex;justify-content: center;justify-items: center;margin-left: 450px;">
-                <i style="background-color: aqua;color: aliceblue;" class="fa fa-arrow-left nav-arrow" onclick="showPreviousProject()"></i>
+            <div class="projects-container" style="display: flex;justify-content: center;justify-items: center;">
+                <i style="color: aqua;" class="fa fa-arrow-left nav-arrow" onclick="showPreviousProject()"></i>
                 <div class="the-projects2">
                     <div class="project2">
                         <img src="https://tse4.mm.bing.net/th?id=OIP.pa3lzc4GN69Sq5M1hEdoCQHaEe&pid=Api&P=0&h=220" alt="">
@@ -85,7 +78,7 @@
                         <a href="https://mohammedhakim.netlify.app" target="_blank" class="btn">View Project</a>
                     </div>
                 </div>
-                <i class="fa fa-arrow-right nav-arrow" onclick="showNextProject()" style="background-color: aqua;color: aliceblue;"></i>
+                <i class="fa fa-arrow-right nav-arrow" onclick="showNextProject()" style="color: aqua;"></i>
             </div>
         </div>
     </div>
@@ -93,17 +86,7 @@
     
 
     <div id="services" class="section">
-        <nav>
-            <img src="https://tse1.mm.bing.net/th?id=OIP.f7DfmwJIlI2gJoyqqdNWOQHaEO&pid=Api&P=0&h=220" class="logo" />
-            <ul>
-                <li style="color: black !important;"><a href="#hero" onclick="showContent('hero')">Home</a></li>
-                <li style="color: black !important;"><a href="#projects" onclick="showContent('projects')" style="color: black !important;">Projects</a></li>
-                <li style="color: black !important;"><a href="#services" onclick="showContent('services')" style="color: black !important;">Services</a></li>
-                <li style="color: black !important;"><a href="#contact" onclick="showContent('contact')" style="color: black !important;">Contact</a></li>
-            </ul>
-            <a href="#contact" class="btn" onclick="showContent('contact')">Resume</a>
-        </nav>
-        <div class="content">
+        <div class="content" style="width: 100%;">
             <span class="title3">
                 My services
             </span>
@@ -113,7 +96,9 @@
             <p style="color: black">
                 here's some of my skills
             </p>
-            <div class="the-projects">
+            <center>
+            <i style="color: aqua; display: inline-block;" class="fa fa-arrow-left nav-arrow" onclick="showPreviousSkill()"></i>
+            <div class="the-projects" style="display: inline-flex !important;">
                 <div class="project">
                     <i class="fa-brands fa-html5" style="font-size: 100px; color: orange;"></i>
                     <hr>
@@ -130,34 +115,32 @@
                 </div>
                 <div class="project">
                     <i class="fa-brands fa-js" style="background-color: yellow; font-size: 100px;"></i>
+                    <hr>
                     <h3>Js</h3>
-                    <p style="color: black; font-size: 20px;">JS refers to "Javascript" and it's a very famous programming language for back-end website development </p>
+                    <hr>
+                    <p style="color: black; font-size: 20px;">JS refers to "Javascript" and it's a very famous programming language for front end website development </p>
                 </div>
                 <div class="project">
                     <img src="https://tse2.explicit.bing.net/th?id=OIP.PN29PVEWUj01pX00vrdCvwHaJK&pid=Api&P=0&h=220" alt="" style="width: 100px; height: 100px;">
+                    <hr>
                     <h3>Flutter</h3>
+                    <hr>
                     <p style="color: black;font-size: 20px;">Flutter is a cross platform Mobile app development tool developped with Google and it's easy to use </p>
                 </div>
                 <div class="project">
                     <img src="icon_dart@2x.png" alt="" style="width: 100px;height: 100px;">
+                    <hr>
                     <h3>Google Dart</h3>
+                    <hr>
                     <p style="color: black;font-size: 20px;"> Google dart is a cross platform mobile app development programming language which flutter works with</p>
                 </div>
             </div>
+            <i class="fa fa-arrow-right nav-arrow" onclick="showNextSkill()" style="color: aqua;display: inline-block; " ></i>
+        </center>
         </div>
     </div>
 
     <div id="contact" class="section">
-        <nav>
-            <img src="https://tse1.mm.bing.net/th?id=OIP.f7DfmwJIlI2gJoyqqdNWOQHaEO&pid=Api&P=0&h=220" class="logo" />
-            <ul>
-                <li><a href="#hero" onclick="showContent('hero')">Home</a></li>
-                <li><a href="#projects" onclick="showContent('projects')">Projects</a></li>
-                <li><a href="#services" onclick="showContent('services')">Services</a></li>
-                <li><a href="#contact" onclick="showContent('contact')">Contact</a></li>
-            </ul>
-            <a href="#hero" class="btn" onclick="showContent('hero')">Return</a>
-        </nav>
         <div class="content">
             <span class="title">Contact Me</span>
             <h1>Get in Touch</h1>
@@ -166,13 +149,13 @@
 
                 <p><a href="mailto:yoyohakim615@gmail.com"><i class="fa fa-envelope" style="font-size: 40px;" id="gmail"></i></a> Gmail: yoyohakim615@gmail.com</p>
                 <p><i class="fa fa-phone" style="font-size: 40px;"></i> Phone: +201115051830</p>
-                <p>whatsapp <a href="https://wa.me/201115051830"><i class="fa-brands fa-whatsapp" id="whats" style="font-size: 40px;"></i></a></p>
-                <p>Facebook <a href="https://www.facebook.com/profile.php?id=100016126369388"><i class="fa-brands fa-facebook" id="face" style="font-size: 40px;"></i></a></p>
+                <p><a href="https://wa.me/201115051830"><i class="fa-brands fa-whatsapp" id="whats" style="font-size: 40px;"></i></a>whatsapp</p>
+                <p><a href="https://www.facebook.com/profile.php?id=100016126369388"><i class="fa-brands fa-facebook" id="face" style="font-size: 40px;"></i></a>Facebook</p>
             </div>
         </div>
     </div>
 
-    <!-- JavaScript to handle navigation -->
+   
     <script src="script.js">
         
     </script>

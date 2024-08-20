@@ -1,385 +1,394 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
-body{
-    overflow-y: scroll;
+body {
+  overflow-y: scroll;
 }
-html, body {
-    height: 100%;
-
-}
-
-#hero, #projects {
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    display: none;
-    background-repeat: no-repeat;
+html,
+body {
+  height: 100%;
 }
 
-#hero {
-    background-image: url('//static-ssl.businessinsider.com/image/55379b8becad047f4e8fddb3-960/6180104944_73e0a291aa_b.jpg');
+#home,
+#projects {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: none;
+  background-repeat: no-repeat;
+}
+
+#home {
+  background-image: url("//static-ssl.businessinsider.com/image/55379b8becad047f4e8fddb3-960/6180104944_73e0a291aa_b.jpg");
 }
 
 #projects {
-    background-image: url('https://tse3.mm.bing.net/th?id=OIP._mYBFudvvFFha4mAVWvM5AHaEK&pid=Api&P=0&h=220');
+  background-image: url("https://tse3.mm.bing.net/th?id=OIP._mYBFudvvFFha4mAVWvM5AHaEK&pid=Api&P=0&h=220");
 }
 
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 30px 100px;
-    order: -1;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 1;
-    margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 100px;
+  order: -1;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  margin-bottom: 20px;
 }
 
 .logo {
-    max-height: 35px;
+  max-height: 35px;
 }
 
 nav ul li {
-    list-style: none;
-    display: inline-block;
-    padding: 10px 20px;
+  list-style: none;
+  display: inline-block;
+  padding: 10px 20px;
 }
 
 nav ul li a {
-    color: white;
-    position: relative;
-    padding: 5px 0;
+  color: white;
+  position: relative;
+  padding: 5px 0;
 }
 
 nav ul li a:hover {
-    color: greenyellow;
+  color: greenyellow;
 }
 
 nav ul li a:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 0;
-    height: 3px;
-    background: blue;
-    transition: 0.3s;
-    bottom: 0;
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: blue;
+  transition: 0.3s;
+  bottom: 0;
 }
 
 nav ul li a:hover:after {
-    width: 100%;
+  width: 100%;
 }
-nav ul li a:active{
-    color: white;
+nav ul li a:active {
+  color: white;
 }
 
 .btn {
-    color: #fff;
-    font-size: 16px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    padding: 16px 40px;
-    border-radius: 500px;
-    display: inline-block;
-    font-weight: 500;
-    transition: all 0.4s ease-in-out;
-    background: blue;
-    border: 2px solid greenyellow;
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 16px 40px;
+  border-radius: 500px;
+  display: inline-block;
+  font-weight: 500;
+  transition: all 0.4s ease-in-out;
+  background: blue;
+  border: 2px solid greenyellow;
 }
 
 .btn:hover {
-    background: transparent;
-    border-color: greenyellow;
-    color: blue;
+  background: transparent;
+  border-color: greenyellow;
+  color: blue;
 }
 
 .content {
-    position: absolute;
-    top: 50%;
-    left: 8%;
-    transform: translateY(-50%);
-    z-index: 2;
-    color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+  z-index: 2;
+  color: #fff;
 }
 
 .content .title {
-    color: #0a0a0a;
-    font-size: 15px;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    display: inline-block;
-    margin-bottom: 20px;
-    background: linear-gradient(
-        120deg,
-        #1c99fe 20.69%,
-        #7644ff 50.19%,
-        greenyellow 79.69%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  color: #0a0a0a;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  display: inline-block;
+  margin-bottom: 20px;
+  background: linear-gradient(
+    120deg,
+    #1c99fe 20.69%,
+    #7644ff 50.19%,
+    greenyellow 79.69%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.title3{
-    color: #0a0a0a;
-    font-size: 15px;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    display: inline-block;
-    margin-bottom: 20px;
-    background: linear-gradient(
-        120deg,
-        blue 20.69%,
-        purple 50.19%,
-        green 79.69%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.title3 {
+  color: #0a0a0a;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  display: inline-block;
+  margin-bottom: 20px;
+  background: linear-gradient(120deg, blue 20.69%, purple 50.19%, green 79.69%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .content h1 {
-    color: #1f1f25;
-    font-size: 40px;
-    font-weight: 150;
-    line-height: 20px;
-    text-transform: inherit;
-    width: 70%;
+  color: #1f1f25;
+  font-size: 40px;
+  font-weight: 150;
+  line-height: 20px;
+  text-transform: inherit;
+  width: 70%;
 }
 
 .content h1 span {
-    color: greenyellow;
+  color: greenyellow;
 }
 
 .content p {
-    width: 55%;
-    color: #202020;
-    margin-top: 15px;
-    margin-bottom: 20px;
+  width: 55%;
+  color: #202020;
+  margin-top: 15px;
+  margin-bottom: 20px;
 }
 
 .section {
-    display: none;
-    position: relative;
-    width: 100%;
-    height: 100vh;
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 100vh;
 }
-#projects .content{
-    margin-top: 30px;
+#projects .content {
+  margin-top: 30px;
 }
-.project,.project2 {
-    border: 1px solid black;
-    width: 300px;
-    height: 450px;
-    display: flex;
-    flex-flow: column nowrap ;
-    align-items: center;
-    color: #0a0a0a;
-    justify-content: space-between;
+.project,
+.project2 {
+  border: 1px solid black;
+  width: 300px;
+  height: 450px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  color: #0a0a0a;
+  justify-content: space-between;
 }
-.project img,.project2 img{
-    height: 120px;
-    width: 100%;
+.project img,
+.project2 img {
+  height: 120px;
+  width: 100%;
 }
-.the-projects,.the-projects2{
-    display: flex;
-    gap: 5px;
-    flex-wrap:nowrap;
-    scrollbar-width: 4px;
-    scrollbar-color: red;
-    
+.the-projects,
+.the-projects2 {
+  display: flex;
+  gap: 5px;
+  flex-wrap: nowrap;
 }
-#services{
-    background-image: url(https://img.freepik.com/free-vector/digital-white-background-with-binary-code-numbers_1017-25335.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: none;
-    width: 100%;
-    height: 100vh;
+#services {
+  background-image: url(https://tse4.mm.bing.net/th?id=OIP.jjxW6vwh3O5bp11gWYhYIAHaE8&pid=Api&P=0&h=220);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: none;
+  width: 100%;
+  height: 100vh;
 }
-#contact{
-    background-image: url(https://tse3.mm.bing.net/th?id=OIP.gfTSNghWIo4CE6fjoKW0fwHaGl&pid=Api&P=0&h=220);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: none;
-    width: 100%;
-    height: 100vh;
+#services .project {
+  background-color: #fff;
 }
-#gmail:hover{
-    color: whitesmoke;
-    background-color: orangered;
-
+#contact {
+  background-image: url(https://tse3.mm.bing.net/th?id=OIP.gfTSNghWIo4CE6fjoKW0fwHaGl&pid=Api&P=0&h=220);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: none;
+  width: 100%;
+  height: 100vh;
 }
-#whats:hover{
-    color: greenyellow;
+#gmail:hover {
+  color: whitesmoke;
+  background-color: orangered;
 }
-#face:hover{
-    background-color:white ;
-    color: #3b5998;
-    border-radius: 50%;
+#whats:hover {
+  color: greenyellow;
 }
-.section{
-    overflow-y: scroll;
-    scrollbar-width: 4px;
-    scrollbar-color: red;
+#face:hover {
+  background-color: white;
+  color: #3b5998;
+  border-radius: 50%;
+}
+.section {
+  overflow-y: scroll;
+  scrollbar-width: 4px;
+  scrollbar-color: red;
 }
 .projects-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-   
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
 }
 
 .nav-arrow {
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-    padding: 0 10px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  padding: 0 10px;
 }
 
 .nav-arrow:hover {
-    color: greenyellow;
+  color: greenyellow;
 }
 
-.the-projects2 {
-    display: flex;
-    overflow: hidden;
-    width: 100%; /* Adjust width as needed */
-    justify-content: center;
-    max-width: 900px;
+.the-projects2,
+.the-projects {
+  display: flex;
+  overflow: hidden;
+  width: 100%; /* Adjust width as needed */
+  justify-content: center;
+  max-width: 900px;
 }
 
-.project2 {
-    display: none; 
-    
+.project2,
+.project {
+  display: none;
 }
 
-.project2.active {
-    display: block; /* Show the active project */
+.project2.active,
+.project.active {
+  display: block; /* Show the active project */
 }
 /* Add this to your existing style.css */
 @media only screen and (max-width: 77mm) {
-    /* Adjustments for screens up to 77mm wide */
-    body {
-        font-size: 36px;
-    }
+  /* Adjustments for screens up to 77mm wide */
+  body {
+    font-size: 36px;
+  }
 
-    nav ul {
-        display: block;
-        text-align: center;
-    }
+  nav ul {
+    display: block;
+    text-align: center;
+  }
 
-    nav ul li {
-        display: inline-block;
-        margin: 0 5px;
-    }
+  nav ul li {
+    display: inline-block;
+    margin: 0 5px;
+  }
 
-    .content {
-        padding: 10px;
-    }
+  .content {
+    padding: 10px;
+  }
 
-    .content h1 {
-        font-size: 18px;
-    }
+  .content h1 {
+    font-size: 18px;
+  }
 
-    .content p {
-        font-size: 12px;
-    }
+  .content p {
+    font-size: 12px;
+  }
 
-    .btn {
-        font-size: 12px;
-        padding: 5px 10px;
-    }
+  .btn {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
 
-    .project, .project2 {
-        margin-bottom: 10px;
-    }
+  .project,
+  .project2 {
+    margin-bottom: 10px;
+  }
 
-    .project h3, .project2 h3 {
-        font-size: 14px;
-    }
+  .project h3,
+  .project2 h3 {
+    font-size: 14px;
+  }
 
-    .project p, .project2 p {
-        font-size: 12px;
-    }
+  .project p,
+  .project2 p {
+    font-size: 12px;
+  }
 }
 @media only screen and (max-width: 360px) {
-    nav {
-        padding: 20px 20px;
-    }
+  nav {
+    padding: 20px 20px;
+  }
 
-    nav ul {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
+  nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 
-    nav ul li {
-        margin: 0 10px;
-        padding: 5px;
-    }
+  nav ul li {
+    margin: 0 10px;
+    padding: 5px;
+  }
 
-    .content {
-        padding: 10px;
-        left: 10%;
-        top: 40%;
-    }
+  .content {
+    padding: 10px;
+    left: 10%;
+    top: 40%;
+  }
 
-    .content h1 {
-        font-size: 24px;
-        line-height: 30px;
-        width: 100%;
-    }
+  .content h1 {
+    font-size: 24px;
+    line-height: 30px;
+    width: 100%;
+  }
 
-    .content p {
-        font-size: 14px;
-        width: 100%;
-    }
+  .content p {
+    font-size: 14px;
+    width: 100%;
+  }
 
-    .btn {
-        font-size: 14px;
-        padding: 10px 20px;
-    }
+  .btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
 
-    .project, .project2 {
-        width: 100%;
-        height: auto;
-        margin-bottom: 20px;
-    }
+  .project,
+  .project2 {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
 
-    .project h3, .project2 h3 {
-        font-size: 18px;
-    }
+  .project h3,
+  .project2 h3 {
+    font-size: 18px;
+  }
 
-    .project p, .project2 p {
-        font-size: 14px;
-    }
+  .project p,
+  .project2 p {
+    font-size: 14px;
+  }
 
-    .nav-arrow {
-        font-size: 1.5rem;
-    }
+  .nav-arrow {
+    font-size: 1.5rem;
+  }
 
-    .the-projects, .the-projects2 {
-        max-width: 100%;
-    }
+  .the-projects,
+  .the-projects2 {
+    max-width: 100%;
+  }
 
-    #services, #contact, #projects, #hero {
-        background-size: cover;
-        background-position: center;
-        height: 100vh;
-    }
+  #services,
+  #contact,
+  #projects,
+  #home {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
 }
