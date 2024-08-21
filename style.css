@@ -325,6 +325,10 @@ nav ul li a:active {
     flex-wrap: nowrap;
     align-items: center;
     gap: 10px;
+    overflow-x: scroll;
+  }
+  #services {
+    overflow-x: scroll;
   }
 }
 @media only screen and (max-width: 360px) {
@@ -398,5 +402,13 @@ nav ul li a:active {
     background-size: cover;
     background-position: center;
     height: 100vh;
+  }
+  .services-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+  }
+  #services {
+    overflow-x: scroll;
   }
 }
