@@ -234,7 +234,7 @@ nav ul li a:active {
   scrollbar-width: 4px;
   scrollbar-color: red;
 }
-.projects-container {
+.projects-container,.services-container {
   display: flex;
   align-items: center;
   justify-content: center;
