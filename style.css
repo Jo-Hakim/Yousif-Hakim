@@ -184,6 +184,7 @@ nav ul li a:active {
   align-items: center;
   color: #0a0a0a;
   justify-content: space-between;
+  border-radius: 5px;
 }
 .project img,
 .project2 img {
@@ -234,7 +235,7 @@ nav ul li a:active {
   scrollbar-width: 4px;
   scrollbar-color: red;
 }
-.projects-container,.services-container {
+.projects-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -407,7 +408,6 @@ nav ul li a:active {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: scroll;
-    gap: 10px
   }
   #services {
     overflow-x: scroll;
