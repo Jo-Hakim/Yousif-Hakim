@@ -199,7 +199,7 @@ nav ul li a:active {
   flex-wrap: nowrap;
 }
 #services {
-  background-image: url("https://files.oaiusercontent.com/file-F2RzXTAiStTbbo2NdLU9kD?se=2025-01-06T11%3A53%3A15Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D1aba061f-8f71-4a54-bdf3-24d3bfbc3d1d.webp&sig=wUy%2BahAXStHQY98RqsrgIAGnuSPrJ%2BO%2B%2BvKxUBVMM6w%3D");
+  background-image: url("services.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
