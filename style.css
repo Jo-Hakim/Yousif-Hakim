@@ -16,13 +16,10 @@ a {
   color: white;
 }
 body {
-  overflow-y: scroll;
   background-color: var(--sage-beige);
+  padding-bottom: 30px;
 }
-html,
-body {
-  height: 100%;
-}
+
 .section {
   display: none;
 }
@@ -167,9 +164,28 @@ textarea {
 #whats:hover {
   color: #25d366;
 }
-
+.certificates {
+  position: relative;
+  padding: 0;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.certificate {
+  position: absolute;
+  width: 100%;
+  margin: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  left: 0;
+  border-radius: 7px;
+  display: none;
+}
 #face:hover {
   color: #3b5998;
+}
+#youtube:hover {
+  color: red;
 }
 header h2 {
   color: whitesmoke;
@@ -271,9 +287,10 @@ header h2 {
 }
 #services {
   display: none;
-  padding: 0;
   animation: slideDown 1.5s ease-out forwards;
+  padding: 0;
 }
+
 #services .about {
   width: 100%;
   height: 200px;
@@ -485,7 +502,29 @@ hr {
     opacity: 1;
   }
 }
+@keyframes goLeft {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
 
+  to {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+}
+
+@keyframes comeFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 @media (max-width: 768px) {
   * {
     padding: 10px;

@@ -6,18 +6,23 @@ const form = document.getElementById("message-form"),
   first = document.getElementById("f-name"),
   last = document.getElementById("l-name"),
   email = document.getElementById("email"),
-  message = document.getElementById("message");
+  message = document.getElementById("message"),
+  certificates = document.getElementsByClassName("certificate");
 
 function showContent(sectionId) {
   for (const id of sections) {
     const section = document.getElementById(id);
     if (id === sectionId) {
       section.style.display = "block";
+      section.style.paddingBottom = "30px";
     } else {
       section.style.display = "none";
     }
   }
 }
+document.addEventListener("DOMContentLoaded", function () {
+  setInterval(changeCertificate, 4000);
+});
 applicationOverlay.addEventListener("click", function () {
   const link = document.createElement("a");
   link.href = "Heart.apk";
@@ -32,6 +37,7 @@ form.addEventListener("submit", function (e) {
   }
   sendEmail(username, emailAddress, messageText);
 });
+
 const username = first.value.trim() + " " + last.value.trim();
 const emailAddress = email.value.trim();
 const messageText = message.value.trim();
@@ -42,4 +48,21 @@ function sendEmail(name, email, message) {
     reply_to: email,
     message: message,
   });
+}
+
+var currentCertificate = 0;
+function changeCertificate() {
+  certificates[currentCertificate].style.animation =
+    "goLeft 0.3s ease-out forwards";
+
+  setTimeout(() => {
+    certificates[currentCertificate].style.display = "none";
+
+    currentCertificate = (currentCertificate + 1) % certificates.length;
+
+    certificates[currentCertificate].style.display = "inline-block";
+
+    certificates[currentCertificate].style.animation =
+      "comeFromRight 0.3s ease-out forwards";
+  }, 300);
 }
