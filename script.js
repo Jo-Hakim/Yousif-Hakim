@@ -1,5 +1,4 @@
 const sections = ["home", "portfolio", "services", "contact"];
-const applicationOverlay = document.getElementById("application-overlay");
 const form = document.getElementById("message-form"),
   serviceID = "service_ix4dh1r",
   templateID = "template_bo778km",
@@ -23,12 +22,13 @@ function showContent(sectionId) {
 document.addEventListener("DOMContentLoaded", function () {
   setInterval(changeCertificate, 4000);
 });
-applicationOverlay.addEventListener("click", function () {
+
+function download(app) {
   const link = document.createElement("a");
-  link.href = "Heart.apk";
-  link.download = "Heart.apk";
+  link.href = app;
+  link.download = app;
   link.click();
-});
+}
 form.addEventListener("submit", function (e) {
   e.preventDefault();
   if (!form.checkValidity) {
