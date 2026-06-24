@@ -1,184 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Yousif Hakim يوسف حكيم</title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Youssef Hakim - Software Developer</title>
     <!-- CSS link -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <meta name="google-site-verification" content="V945EDj5wTietLMNrWcT4R0Xs0u539kB-bju8jkZHLo" />
-    <link rel="icon" href="yousif.jpeg" type="image/jpeg" sizes="24*16"> 
-    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css">
-    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
-</head>
-<body>
-    <nav>
-        <img src="yousif.jpeg" class="logo" />
-        <div class="clock"></div>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <meta
+      name="google-site-verification"
+      content="V945EDj5wTietLMNrWcT4R0Xs0u539kB-bju8jkZHLo"
+    />
+    <link rel="icon" href="yousif.jpeg" type="image/jpeg" sizes="24*16" />
+  </head>
+  <!-- prettier-ignore -->
+  <body>
+    <header>
+      <h2>⌹     Youssef Hakim</h2>
+      <div class="clock"></div>
 
-        
-
-        <ul>
-            <li><a href="#" onclick="showContent('home')">Home</a></li>
-            <li><a href="#" onclick="showContent('projects')">Projects</a></li>
-            <li><a href="#" onclick="showContent('services')">Services</a></li>
-            <li><a href="#" onclick="showContent('contact')">Contact</a></li>
-        </ul>
-        
-    </nav>
+      <ul>
+        <li><a href="javascript:void(0)" onclick="showContent('home')">Home</a></li>
+        <li><a href="javascript:void(0)" onclick="showContent('portfolio')">Portfolio</a></li>
+        <li><a href="javascript:void(0)" onclick="showContent('services')">Services</a></li>
+        <li><a href="javascript:void(0)" onclick="showContent('contact')">Contact</a></li>
+      </ul>
+    </header>
     <div id="home" class="section">
-        
-        <div class="content">
-            <span class="title">Freelance Web Developer</span>
-            <h1>Hello, I’m <span>Yousif</span></h1>
-            <p>I'm a freelancer and I build amazing websites using HTML5, CSS3, and JavaScript and very useful applications using Flutter and Google Dart.</p>
-            
-        </div>
+      <div class="content">
+        <h2>Freelance Software Developer</h2>
+        <p>I build multiple software apps, including (Web, AI, and Mobile Apps), using HTML, CSS, JavaScript, Python, Dart and C++.</p>
+      </div>
+      <button id="btn" class="btn" onclick="showContent('portfolio')">Explore My Work</button>
     </div>
-
-    <div id="projects" class="section">
-        
-        <div class="content" style="width: 100%;">
-            <span class="title">My Projects</span>
-            <h1 style="color: white;">I've built a lot of projects</h1>
-            <p style="color: white;">Here are some of the most important projects that I've built:</p>
-            <center>
-            <div class="projects-container" style="display: flex;justify-content: center;justify-items: center;">
-                <i style="color: aqua;" class="fa fa-arrow-left nav-arrow" onclick="showPreviousProject()"></i>
-                <div class="the-projects2">
-                    <div class="project2" >
-                        <img src="https://tse4.mm.bing.net/th?id=OIP.pa3lzc4GN69Sq5M1hEdoCQHaEe&pid=Api&P=0&h=220" alt="">
-                        <h3>Protect from hackers</h3>
-                        <hr>
-                        <p style="color: black;"> some advice for android and windows users to protect themselves from hacking and how to use technology safely without any danger.
-                        </p>
-                        <a href="https://protectfromhackers.netlify.app" class="btn" target="_blank">View Project</a>
-                    </div>
-                    <div class="project2">
-                        <img src="back.png" alt="">
-                        <h3>Tourism in Egypt</h3>
-                        <hr>
-                        <p style="color: black;">In this site, user sees some of Egypt's most important tourism governorates and sees some images for every governorate </p>
-                        <a href="https://tourisminegypt.netlify.app" class="btn" target="_blank">View Project</a>
-                    </div>
-                    <div class="project2">
-                        <img src="Equity.jpg" alt="">
-                        <h3>Equ(al)ity</h3>
-                        <hr>
-                        <p style="color: black;">In this site, user understands the difference between equity and equality. They also know some examples of both equity and equality.</p>
-                        <a href="https://equityvsequality.netlify.app" target="_blank" class="btn">View Project</a>
-                    </div>
-                    <div class="project2">
-                        <img src="pyramids.jpg" alt="">
-                        <h3>Book a Trip</h3>
-                        <hr>
-                        <p style="color: black;">In this site, users can fill in a form to book a journey in Egypt to see the most important places and tourist attractions in Egypt to go on holidays.</p>
-                        <a href="https://bookingatrip.netlify.app" target="_blank" class="btn">View Project</a>
-                    </div>
-                    <div class="project2">
-                        <img src="Egypt.jpeg" alt="">
-                        <h3>Visit Egypt</h3>
-                        <hr>
-                        <p style="color: black;">In this site, users learn more about Egypt's traditions and see some of Egypt's videos, attractions, songs, food and many other things .</p>
-                        <a href="https://welcometoegypt.netlify.app" target="_blank" class="btn">View Project</a>
-                    </div>
-                    <div class="project2">
-                        <img src="hakim.jpg" alt="">
-                        <h3>Mohammed Hakim</h3>
-                        <hr>
-                        <p style="color: black;">This is a site for an Egyptian writer and reporters manager. You can see his most important videos, work, and articles that he wrote in work.</p>
-                        <a href="https://mohammedhakim.netlify.app" target="_blank" class="btn">View Project</a>
-                    </div>
-                </div>
-                <i class="fa fa-arrow-right nav-arrow" onclick="showNextProject()" style="color: aqua;"></i>
-            </div>
-        </div>
+    <div id="portfolio" class="section">
+      <h1>My Portfolio</h1>
+      <div class="content">
+          
+          <div class="img-container" style="width: 40%;padding: 0;" ><div class="overlay" onclick="window.location.assign('https://mohammed-hakim.netlify.app/')""><h4>Mohammed Hakim</h4></div><img src="https://aicdn.picsart.com/b1a936e9-4f92-4e7f-b337-3848d57d601c.jpg" alt="mohammed-hakim" style="width: 100%; height: 100%; object-fit: cover;"></div>
+          <div class="img-container" style="width: 58%;"><div class="overlay"><h4>Home Page</h4></div><img src="home.png" alt="Home Page"></div>
+          <div class="img-container" style="width: 100%;"><div class="overlay" onclick="window.location.assign('tourisminegypt.netlify.app')"><h4>Tourism in Egypt</h4></div><img src="back.png" alt="Tourism in Egypt" style="width: 100%; height: 100%; object-fit: cover;"></div>
+          <div class="img-container" style="width: 58%;"><div class="overlay" onclick="window.location.assign('https://welcometoegypt.netlify.app')"><h4>Come to Egypt</h4></div><img src="pyramids.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;"></div>
+          <div class="img-container" style="width: 40%;"><div class="overlay" id="application-overlay"><h4>Heart Rate Monitor</h4></div><img src="Heart.jpg" alt="Heart Rate Monitor" style="width: 100%; height: 100%; object-fit: cover;"></div>
+      </div>
     </div>
-</center>
-    
-
-    <div id="services" class="section">
-        <div class="content" style="width: 100%;">
-            <span class="title3">
-                My services
-            </span>
-            <h1 style="color: black;">
-                I've lot's of skills
-            </h1>
-            <p style="color: black">
-                here's some of my skills
-            </p>
-            <center>
-            <div class="services-container">
-                <i style="color: aqua; display: inline-block;" class="fa fa-arrow-left nav-arrow" onclick="showPreviousSkill()"></i>
-            <div class="the-projects" style="display: inline-flex !important;">
-                <div class="project">
-                    <i class="fa-brands fa-html5" style="font-size: 100px; color: orange;"></i>
-                    <hr>
-                    <h3>HTML5</h3>
-                    <hr>
-                    <p style="color: black; font-size: 20px;">HTML refers to "Hyper text mark-up language" and it is one of the most common web development languages in the world</p>
-                </div>
-                <div class="project">
-                    <i class="fa-brands fa-css3-alt" style="background-color: white; font-size: 100px; color: blue"></i>
-                    <hr>
-                    <h3>CSS3</h3>
-                    <hr>
-                    <p style="color: black; font-size: 20px;">CSS refers to "Cascading stylesheet" and it is very important to set style of the HTML elements </p>
-                </div>
-                <div class="project">
-                    <i class="fa-brands fa-js" style="background-color: yellow; font-size: 100px;"></i>
-                    <hr>
-                    <h3>Js</h3>
-                    <hr>
-                    <p style="color: black; font-size: 20px;">JS refers to "Javascript" and it's a very famous programming language for front end website development </p>
-                </div>
-                <div class="project">
-                    <img src="flutter.png" alt="" style="width: 100px; height: 100px;">
-                    <hr>
-                    <h3>Flutter</h3>
-                    <hr>
-                    <p style="color: black;font-size: 20px;">Flutter is a cross platform Mobile app development tool developped with Google and it's easy to use </p>
-                </div>
-                <div class="project">
-                    <img src="icon_dart@2x.png" alt="" style="width: 100px;height: 100px;">
-                    <hr>
-                    <h3>Google Dart</h3>
-                    <hr>
-                    <p style="color: black;font-size: 20px;"> Google dart is a cross platform mobile app development programming language which flutter works with</p>
-                </div>
-                <div class="project">
-                    <img src="python.png" alt="" style="height: 100px;width: 100px;">
-                    <hr>
-                    <h3>Python</h3>
-                    <hr>
-                    <p style="color: black; font-size: 20px;">Python is One of the most useful and the most easy languages. It's used to develop applicatios, websites, games and AI.</p>
-                </div>
-            </div>
-            <i class="fa fa-arrow-right nav-arrow" onclick="showNextSkill()" style="color: aqua;display: inline-block; " ></i>
-            </div>
-        </center>
-        </div>
+    <!--prettier-ignore-->
+    <div id="services" class="section" style="width: 100%;">
+      <div class="about">
+        <p>About</p>
+        <h2>My Skills</h2>
+      </div>
+      <span class="left img-container" style="background-image: url('flutter dart.jpg');">
+      </span>
+      <span class="right content">
+        <h2>Flutter Dart</h2>
+        <hr>
+        <p>Flutter is a software tool, launched by Google in 2018 used primarily for Coss-Platform Mobile App Development using Google Dart, Which was released in 2011. It is also used in Web pages and Desktop Apps.</p>
+        <h3 style="margin-top: 20px;">Usage</h3>
+        <hr>
+        <p>Flutter Dart is used in:</p>
+          <ul>
+            <li>Mobile App Development</li>
+            <li>Web pages</li>
+            <li>Desktop App Development</li>
+          </ul>
+      </span>
+      <br>
+      <span class="left content">
+        <h2>Python</h2>
+        <hr>
+        <p>Python is a popular, high-level general-purpose programming language celebrated for its simple, English-like syntax and incredible readability, Used primarily in system administration & automation</p>
+        <h3 style="margin-top: 20px;">Usage</h3>
+        <hr>
+        <p>Python is widely used in:</p>
+        <ul>
+          <li>System administration</li>
+          <li>Artificial Intelligence & Machine Learning</li>
+          <li>Data Science & Analytics</li>
+          <li>Web Development</li>
+          <li>Automation & Scripting</li>
+        </ul>
+      </span>
+      <span class="right img-container" style="background-image: url('python.jpg');">
+      </span>
+      <br>
+      <span class="left img-container" style="background-image: url('web.avif');"></span>
+      <span class="right content">
+        <h2>Vanilla Web Development</h2>
+        <hr>
+        <p>Vanilla Web Development is the practice of building websites using the core web technologies—HTML, CSS, and JavaScript for interactivity</p>
+        <h3 style="margin-top:20px;">
+          Usage
+        </h3>
+        <hr>
+        <p>Vanilla web Development is used in:</p>
+        <ul>
+          <li>Simple websites</li>
+          <li>Interactive UI features</li>
+          <li>Small web apps</li>
+          <li>API-based frontends</li>
+          <li>Prototyping</li>
+        </ul>
+      </span>
+      <span class="left content">
+        <h2>C++</h2>
+        <hr>
+        <p>C++ is a high-performance, compiled, general-purpose programming language developed by Bjarne Stroustrup as an extension of the C language. It's some difficult (low-level) but very fast in compilation.</p>
+        <h3 style="margin-top: 20px;">Usage</h3>
+        <hr>
+        <p>C++ is used in</p>
+        <ul>
+          <li>Operating Systems</li>
+          <li>System & Infrastructure Software</li>
+          <li>Embedded Systems & IoT</li>
+          <li>Aerospace & Defence</li>
+          <li>Finance & Trading</li>
+        </ul>
+      </span>
+      <span class="right img-container" style="background-image:url('c++.jpg') ;"></span>
     </div>
-
     <div id="contact" class="section">
-        <div class="content">
-            <span class="title">Contact Me</span>
-            <h1>Get in Touch</h1>
-            <p style="color: white;">Feel free to reach out to me for any inquiries or collaborations. I'd love to hear from you!</p>
-            <div class="contact-info">
-
-                <p><a href="mailto:yoyohakim615@gmail.com"><i class="fa fa-envelope" style="font-size: 40px;" id="gmail"></i></a> Gmail: yoyohakim615@gmail.com</p>
-                <p><i class="fa fa-phone" style="font-size: 40px;"></i> Phone: +201115051830</p>
-                <p><a href="https://wa.me/201115051830"><i class="fa-brands fa-whatsapp" id="whats" style="font-size: 40px;"></i></a>whatsapp</p>
-                <p><a href="https://www.facebook.com/profile.php?id=100016126369388"><i class="fa-brands fa-facebook" id="face" style="font-size: 40px;"></i></a>Facebook</p>
-            </div>
-        </div>
+      <h1>Get in Touch</h1>
+        <span class="content">
+          <h2>Contact Us</h2>
+          <p>Feel free to reach out to us for any inquiries, collaborations, or feedback. We value your input and look forward to connecting with you.</p>
+          <br><br><br><br><br><br>
+          <div style="margin: 0;padding: 0;"><i class="fa-brands fa-square-whatsapp" id="whats" onclick="window.location.assign('https://wa.me/+201115051830')"></i>
+          <i class="fa-brands fa-square-facebook" id="face" onclick="window.location.assign('https://www.facebook.com/share/1bPTkAmKc8/')"></i></div>
+        </span>
+        <span class="inputs">
+          <h2>Send an E-mail</h2>
+          <form action="" id="message-form">
+            <input type="text" placeholder="First Name" id="f-name" minlength="2" required/>
+            <input type="text" placeholder="Last Name" id="l-name" minlength="2" required/>
+            <input type="email" placeholder="Email" id="email" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" required/>
+            <textarea placeholder="Message" id="message" minlength="10" required></textarea>
+            <input type="submit" value="Send" class="btn" id="submit-btn" >
+          </form>
+        </span>
     </div>
-
-   
-    <script src="script.js">
-        
-    </script>
-</body>
+  </body>
+  <script src="script.js"></script>
 </html>

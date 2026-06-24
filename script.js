@@ -1,90 +1,45 @@
-function showContent(id) {
-  const sections = document.querySelectorAll(".section");
-  sections.forEach((section) => {
-    section.style.display = section.id === id ? "block" : "none";
-  });
+const sections = ["home", "portfolio", "services", "contact"];
+const applicationOverlay = document.getElementById("application-overlay");
+const form = document.getElementById("message-form"),
+  serviceID = "service_ix4dh1r",
+  templateID = "template_bo778km",
+  first = document.getElementById("f-name"),
+  last = document.getElementById("l-name"),
+  email = document.getElementById("email"),
+  message = document.getElementById("message");
 
-  const links = document.querySelectorAll("nav ul li a");
-  links.forEach((link) => {
-    if (link.getAttribute("href") === "#" + id) {
-      link.style.color = "gray";
+function showContent(sectionId) {
+  for (const id of sections) {
+    const section = document.getElementById(id);
+    if (id === sectionId) {
+      section.style.display = "block";
     } else {
-      link.style.color = "";
+      section.style.display = "none";
     }
-  });
+  }
 }
-
-// Show the home section by default
-document.addEventListener("DOMContentLoaded", () => {
-  showContent("home");
+applicationOverlay.addEventListener("click", function () {
+  const link = document.createElement("a");
+  link.href = "Heart.apk";
+  link.download = "Heart.apk";
+  link.click();
 });
-let currentProjectIndex = 0;
-
-function showProject(index) {
-  const projects = document.querySelectorAll(".project2");
-  projects.forEach((project2, i) => {
-    project2.classList.toggle("active", i === index);
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  if (!form.checkValidity) {
+    form.reportValidity();
+    return;
+  }
+  sendEmail(username, emailAddress, messageText);
+});
+const username = first.value.trim() + " " + last.value.trim();
+const emailAddress = email.value.trim();
+const messageText = message.value.trim();
+emailjs.init("gsGbOGblQxbLNhJUW");
+function sendEmail(name, email, message) {
+  emailjs.send(serviceID, templateID, {
+    from_name: name,
+    reply_to: email,
+    message: message,
   });
 }
-function showNextProject() {
-  const projects = document.querySelectorAll(".project2");
-  currentProjectIndex = (currentProjectIndex + 1) % projects.length;
-  showProject(currentProjectIndex);
-}
-function showPreviousProject() {
-  const projects = document.querySelectorAll(".project2");
-  currentProjectIndex =
-    (currentProjectIndex - 1 + projects.length) % projects.length;
-  showProject(currentProjectIndex);
-}
-// Initially show the first project
-showProject(currentProjectIndex);
-
-// Skill navigation functionality
-let currentSkillIndex = 0;
-
-function showSkill(index) {
-  const skills = document.querySelectorAll(".project");
-  skills.forEach((skill, i) => {
-    skill.classList.toggle("active", i === index);
-  });
-}
-
-function showNextSkill() {
-  const skills = document.querySelectorAll(".project");
-  currentSkillIndex = (currentSkillIndex + 1) % skills.length;
-  showSkill(currentSkillIndex);
-}
-
-function showPreviousSkill() {
-  const skills = document.querySelectorAll(".project");
-  currentSkillIndex = (currentSkillIndex - 1 + skills.length) % skills.length;
-  showSkill(currentSkillIndex);
-}
-showSkill(currentSkillIndex);
-// Clock functionality
-function showClock() {
-  const clock = document.querySelector(".clock");
-  let now = new Date();
-  let hours = now.getHours();
-  let minutes = now.getMinutes();
-  let seconds = now.getSeconds();
-  let period = "AM";
-  if (hours > 12 || hours == 12) {
-    period = "PM";
-    hours = hours - 12;
-  }
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
-  if (seconds < 10) {
-    seconds = `0${seconds}`;
-  }
-  let time = `${period}:${hours}:${minutes}:${seconds}`;
-  clock.innerHTML = time;
-}
-
-setInterval(showClock, 1000);

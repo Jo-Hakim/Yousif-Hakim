@@ -1,416 +1,557 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-
+:root {
+  --dark-brown: #382720;
+  --sage-beige: #e0e3ce;
+  --almost-black: #161616;
+  --white: #ffffff; /* or #f5f5f5 */
+}
 * {
   margin: 0;
-  padding: 0;
+  padding: 20px;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-
 a {
   text-decoration: none;
   color: white;
 }
 body {
   overflow-y: scroll;
+  background-color: var(--sage-beige);
 }
 html,
 body {
   height: 100%;
 }
-
-#home,
-#projects {
+.section {
+  display: none;
+}
+#home {
   width: 100%;
-  height: 100vh;
+  display: block;
+  margin-top: 20px;
+  height: 700px;
+  background-image: url("home.png");
   background-size: cover;
   background-position: center;
-  display: none;
   background-repeat: no-repeat;
+  border-radius: 10px;
+  position: relative;
 }
+#home .content {
+  position: absolute;
+  top: 510px;
+  left: 20px;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 540px;
+  height: 340px;
+  background: rgba(177, 177, 177, 0.8);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(12px);
 
-#home {
-  background-image: url("//static-ssl.businessinsider.com/image/55379b8becad047f4e8fddb3-960/6180104944_73e0a291aa_b.jpg");
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
 }
-
-#projects {
-  background-image: url("https://tse3.mm.bing.net/th?id=OIP.ubUZk5LltKjuAvJoX-H0UgHaEI&pid=Api&P=0&h=220");
-}
-
-nav {
+header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px 100px;
+  padding: 30px 0px;
   order: -1;
   width: 100%;
-  position: fixed;
+  height: 100px;
   top: 0;
-  z-index: 1;
   margin-bottom: 20px;
+  background-color: var(--dark-brown);
+  border-radius: 10px;
 }
-
 .logo {
   max-height: 35px;
 }
-
-nav ul li {
+header ul li {
   list-style: none;
   display: inline-block;
   padding: 10px 20px;
+  transition-duration: 1.5s;
+  animation: slideLeft 1.5s ease-out forwards;
 }
-
-nav ul li a {
+header ul li a {
   color: white;
   position: relative;
   padding: 5px 0;
 }
-
-nav ul li a:hover {
-  color: greenyellow;
+header ul li a:hover {
+  color: black;
 }
-
-nav ul li a:after {
+header ul li a:after {
   content: "";
   position: absolute;
   left: 0;
   width: 0;
   height: 3px;
-  background: blue;
+  background: whitesmoke;
   transition: 0.3s;
   bottom: 0;
 }
-
-nav ul li a:hover:after {
+header ul li a:hover:after {
   width: 100%;
 }
-nav ul li a:active {
+header ul li a:active {
   color: white;
 }
-
 .btn {
-  color: #fff;
+  color: whitesmoke;
   font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 2px;
   padding: 16px 40px;
-  border-radius: 500px;
+  border-radius: 10px;
   display: inline-block;
   font-weight: 500;
-  transition: all 0.4s ease-in-out;
-  background: blue;
-  border: 2px solid greenyellow;
+  background: var(--dark-brown);
+  border: 2px solid whitesmoke;
+  transition-duration: 1.5s;
+  animation: slideDown 1.5s ease-out forwards;
 }
-
 .btn:hover {
-  background: transparent;
-  border-color: greenyellow;
-  color: blue;
+  background-color: whitesmoke;
+  border-color: var(--dark-brown);
+  color: var(--dark-brown);
 }
-
-.content {
+.btn:hover p {
+  color: var(--dark-brown);
+}
+#home .content {
   position: absolute;
-  top: 50%;
-  left: 8%;
+  bottom: 8%;
+  left: 1%;
   transform: translateY(-50%);
   z-index: 2;
   color: #fff;
 }
 
-.content .title {
-  color: #0a0a0a;
-  font-size: 15px;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  display: inline-block;
-  margin-bottom: 20px;
-  background: linear-gradient(
-    120deg,
-    #1c99fe 20.69%,
-    #7644ff 50.19%,
-    greenyellow 79.69%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.title3 {
-  color: #0a0a0a;
-  font-size: 15px;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  display: inline-block;
-  margin-bottom: 20px;
-  background: linear-gradient(120deg, blue 20.69%, purple 50.19%, green 79.69%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.content h1 {
-  color: #1f1f25;
-  font-size: 40px;
-  font-weight: 150;
-  line-height: 20px;
-  text-transform: inherit;
-  width: 70%;
-}
-
-.content h1 span {
-  color: greenyellow;
-}
-
-.content p {
-  width: 55%;
+#home .content p {
   color: #202020;
-  margin-top: 15px;
-  margin-bottom: 20px;
+  transition-duration: 1.5s;
+  animation: slideDown 1.5s ease-out forwards;
 }
-
-.section {
-  display: none;
-  position: relative;
-  width: 100%;
-  height: 100vh;
+i {
+  font-size: 55px;
+  display: inline-block;
+  animation: slideDown 1.5s ease-out forwards;
 }
-#projects .content {
-  margin-top: 30px;
-}
-.project,
-.project2 {
-  border: 1px solid black;
-  width: 300px;
-  height: 450px;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  color: #0a0a0a;
-  justify-content: space-around;
-  border-radius: 5px;
-  background-color: white;
-}
-.project img,
-.project2 img {
-  height: 120px;
-  width: 100%;
-}
-.the-projects,
-.the-projects2 {
-  display: flex;
-  gap: 5px;
-  flex-wrap: nowrap;
-}
-#services {
-  background-image: url("services.webp");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  display: none;
-  width: 100%;
-  height: 100vh;
-}
-#services .project {
-  background-color: #fff;
-}
-#contact {
-  background-image: url(https://files.oaiusercontent.com/file-7ukhixT9SQknAwqUcgwxdU?se=2025-01-06T11%3A59%3A55Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D8788b69d-8f02-4f99-a004-46f131addaa0.webp&sig=172nnWsCZEcTXeXWKFqfrEjagbwyR8Ms8wdiFlHklA8%3D);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  display: none;
-  width: 100%;
-  height: 100vh;
-}
-#gmail:hover {
+input,
+textarea {
+  display: block;
+  border: none;
+  background: transparent;
+  outline: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s;
   color: whitesmoke;
-  background-color: orangered;
+  font-size: 20px;
+}
+input:focus,
+textarea:focus {
+  border-bottom-color: whitesmoke;
+}
+input,
+textarea,
+button {
+  animation: slideLeft 1.5s ease-out forwards;
+}
+textarea {
+  resize: none;
 }
 #whats:hover {
-  color: greenyellow;
+  color: #25d366;
 }
+
 #face:hover {
-  background-color: white;
   color: #3b5998;
-  border-radius: 50%;
 }
-.section {
-  overflow-y: scroll;
-  scrollbar-width: 4px;
-  scrollbar-color: red;
+header h2 {
+  color: whitesmoke;
+  font-size: 40px;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-family: "Times New Roman", Times, serif;
+  transition-duration: 1.5s;
+  animation: slideRight 1.5s ease-out forwards;
 }
-.projects-container {
+#home .content h2 {
+  color: var(--dark-brown);
+  font-size: 50px;
+  font-weight: 250;
+  text-transform: inherit;
+  transition-duration: 1.5s;
+  animation: slideDown 1.5s ease-out forwards;
+  font-family: "Times New Roman", Times, serif;
+}
+#portfolio {
+  width: 100%;
+  margin-top: 20px;
+}
+#portfolio h1 {
+  color: var(--dark-brown);
+  font-size: 60px;
+  font-weight: 500;
+  text-transform: inherit;
+  transition-duration: 1.5s;
+  animation: slideDown 1.5s ease-out forwards;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+}
+/* Pinterest-like layout: flex rows where each image keeps the same height and variable widths */
+#portfolio .content {
   display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 10px 0;
+  animation: slideRight 1.5s ease-out forwards;
+  justify-content: space-between;
+}
+
+#portfolio .content .img-container {
+  display: inline-block; /* shrink-to-fit the image width */
+  position: relative;
+  height: 520px; /* uniform row height */
+  border-radius: 7px;
+  transition-duration: 0.35s;
+  animation: slideDown 1.5s ease-out forwards;
+  overflow: visible;
+  padding: 0;
+}
+#submit-btn {
+  color: var(--dark-brown);
+  background: whitesmoke;
+  width: 45%;
+  transition: 1s ease-out;
+  align-self: flex-end;
+  animation: slideDown 1.5s ease-in;
+}
+#submit-btn:hover {
+  color: whitesmoke;
+  background: var(--dark-brown);
+  border-color: whitesmoke;
+}
+.img-container img {
+  height: 100%;
+  width: 100%; /* width varies according to image aspect ratio */
+  display: block;
+  border-radius: 7px;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: center;
-  justify-items: center;
+  background-color: transparent;
+  transition: background-color 0.5s ease;
+  z-index: 2;
+  border-radius: 0px;
 }
 
-.nav-arrow {
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
-  padding: 0 10px;
+.img-container:hover .overlay {
+  background-color: #382720e6; /* semi-transparent dark-brown */
 }
 
-.nav-arrow:hover {
-  color: greenyellow;
-}
-
-.the-projects2,
-.the-projects {
-  display: flex;
-  overflow: hidden;
-  width: 100%; /* Adjust width as needed */
-  justify-content: center;
-  max-width: 900px;
-}
-
-.project2,
-.project {
+.img-container h4 {
   display: none;
 }
-
-.project2.active,
-.project.active {
-  display: block; /* Show the active project */
+#services {
+  display: none;
+  padding: 0;
+  animation: slideDown 1.5s ease-out forwards;
 }
-/* Add this to your existing style.css */
-@media only screen and (max-width: 77mm) {
-  /* Adjustments for screens up to 77mm wide */
-  body {
-    font-size: 36px;
+#services .about {
+  width: 100%;
+  height: 200px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  margin: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+.about p {
+  color: var(--almost-black);
+  animation: slideRight 1.5s ease-out forwards;
+  font-size: 20px;
+  font-weight: 100;
+}
+.about h2 {
+  color: var(--dark-brown);
+  font-family: "Times New Roman", Times, serif;
+  animation: slideRight 1.5s ease-out forwards;
+  font-size: 90px;
+  font-weight: 300;
+}
+#services .content,
+#services .img-container {
+  width: 49%;
+  display: inline-block;
+  height: 720px;
+  border-radius: 10px;
+  vertical-align: top;
+  margin-top: 20px;
+}
+#services .content {
+  background-color: var(--dark-brown);
+}
+#services .img-container {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.right {
+  margin-left: 1.6%;
+}
+.left {
+  margin-left: 0;
+}
+#services .content h2 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: xx-large;
+  color: whitesmoke;
+}
+#services .content h3 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: x-large;
+  color: whitesmoke;
+}
+#services .content p {
+  margin-top: 15px;
+  color: whitesmoke;
+}
+#services .content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  list-style-position: inside;
+  color: whitesmoke;
+}
+#services .content ul li {
+  color: whitesmoke;
+}
+#contact {
+  display: none;
+  width: 100%;
+  margin-top: 20px;
+  justify-content: space-between;
+  animation: slideDown 1.5s ease-out forwards;
+  padding: 0;
+  position: relative;
+  height: 650px;
+}
+#contact h1 {
+  color: var(--dark-brown);
+  font-size: 60px;
+  font-weight: 500;
+  text-transform: inherit;
+  transition-duration: 1.5s;
+  animation: slideDown 1.5s ease-out forwards;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+}
+#contact span {
+  display: inline-block;
+  width: 49%;
+  height: 700px;
+  margin: 0;
+  background-color: var(--dark-brown);
+  animation: slideDown 1.5s ease-out forwards;
+  border-radius: 7px;
+  position: absolute;
+  margin-bottom: 10px;
+  color: whitesmoke;
+}
+#contact .content {
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+#contact .content h2,
+#contact .inputs h2 {
+  color: whitesmoke;
+  font-size: 50px;
+  font-weight: 500;
+  text-transform: inherit;
+  transition-duration: 1.5s;
+  animation: slideLeft 1.5s ease-out forwards;
+  font-family: "Times New Roman", Times, serif;
+}
+#contact .content p {
+  color: whitesmoke;
+  font-size: 35px;
+  font-weight: 300;
+  text-transform: inherit;
+  transition-duration: 1.5s;
+  animation: slideLeft 1.5s ease-out forwards;
+  font-family: "Times New Roman", Times, serif;
+  max-width: 600px;
+}
+#contact .inputs {
+  right: 0;
+}
+#sizedBox {
+  width: 100%;
+  height: 40px;
+  margin-top: 10px;
+  color: transparent;
+  display: block;
+}
+.img-container:hover h4 {
+  display: block;
+  color: whitesmoke;
+  font-size: 30px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 300;
+  z-index: 3;
+}
+form {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 30px;
+}
+
+hr {
+  height: 1px;
+  background-color: #ccc;
+  border: none;
+  padding: 0;
+  width: 40%;
+  animation: showRight 1.5s ease-out forwards;
+}
+@keyframes getBrown {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: var(--dark-brown);
+    opacity: 0.6;
+  }
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
   }
 
-  nav ul {
-    display: block;
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes showRight {
+  from {
+    width: 0.5%;
+    opacity: 0;
+  }
+  to {
+    width: 40%;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  * {
+    padding: 10px;
+  }
+
+  header {
+    flex-direction: column;
+    height: auto;
+    gap: 10px;
     text-align: center;
   }
 
-  nav ul li {
-    display: inline-block;
-    margin: 0 5px;
+  header ul {
+    padding: 0;
   }
 
-  .content {
-    padding: 10px;
-  }
-
-  .content h1 {
-    font-size: 18px;
-  }
-
-  .content p {
-    font-size: 12px;
-  }
-
-  .btn {
-    font-size: 12px;
-    padding: 5px 10px;
-  }
-
-  .project,
-  .project2 {
-    margin-bottom: 10px;
-  }
-
-  .project h3,
-  .project2 h3 {
-    font-size: 14px;
-  }
-
-  .project p,
-  .project2 p {
-    font-size: 12px;
-  }
-
-  .services-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    gap: 10px;
-    overflow-x: scroll;
-  }
-  #services {
-    overflow-x: scroll;
-  }
-}
-@media only screen and (max-width: 360px) {
-  nav {
-    padding: 20px 20px;
-  }
-
-  nav ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  nav ul li {
-    margin: 0 10px;
+  header ul li {
+    display: block;
     padding: 5px;
   }
 
-  .content {
-    padding: 10px;
-    left: 10%;
-    top: 40%;
+  #home {
+    height: 400px;
   }
 
-  .content h1 {
-    font-size: 24px;
-    line-height: 30px;
+  #home .content {
+    width: 90%;
+    height: auto;
+    top: auto;
+    bottom: 10px;
+    left: 5%;
+  }
+
+  #portfolio .content {
+    flex-direction: column;
+  }
+
+  #portfolio .content .img-container {
+    width: 100% !important;
+    height: 250px;
+  }
+
+  #services .content,
+  #services .img-container {
     width: 100%;
+    height: auto;
+    display: block;
   }
 
-  .content p {
-    font-size: 14px;
-    width: 100%;
+  #contact {
+    height: auto;
+    position: static;
   }
 
-  .btn {
-    font-size: 14px;
-    padding: 10px 20px;
-  }
-
-  .project,
-  .project2 {
+  #contact span {
+    position: static;
     width: 100%;
     height: auto;
     margin-bottom: 20px;
   }
 
-  .project h3,
-  .project2 h3 {
-    font-size: 18px;
+  #contact h1 {
+    font-size: 40px;
   }
 
-  .project p,
-  .project2 p {
-    font-size: 14px;
-  }
-
-  .nav-arrow {
-    font-size: 1.5rem;
-  }
-
-  .the-projects,
-  .the-projects2 {
-    max-width: 100%;
-  }
-
-  #services,
-  #contact,
-  #projects,
-  #home {
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-  }
-  .services-container {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: scroll;
-  }
-  #services {
-    overflow-x: scroll;
+  .about h2 {
+    font-size: 50px;
   }
 }
