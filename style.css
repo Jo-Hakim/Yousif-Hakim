@@ -530,7 +530,11 @@ hr {
   * {
     padding: 10px;
   }
-
+  .certificate {
+    height: auto;
+    background-size: contain;
+    width: 90%;
+  }
   header {
     flex-direction: column;
     height: auto;
@@ -553,7 +557,7 @@ hr {
 
   #home .content {
     width: 90%;
-    height: auto;
+    height: 400px;
     bottom: 2px;
     left: 5%;
   }
@@ -573,12 +577,15 @@ hr {
     width: 100% !important;
     height: 250px;
   }
-
-  #services .content,
-  #services .img-container {
+  #services .content {
+    display: block;
+  }
+  #services .content {
     width: 100%;
     height: auto;
-    display: block;
+  }
+  #services .img-container {
+    display: none;
   }
 
   #contact {
