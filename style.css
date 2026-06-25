@@ -182,6 +182,9 @@ textarea {
   border-radius: 7px;
   display: none;
 }
+.certificate:first-child {
+  display: inline-block;
+}
 #face:hover {
   color: #3b5998;
 }
