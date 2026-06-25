@@ -31,12 +31,12 @@ function download(app) {
 }
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-  if (!form.checkValidity) {
+  if (!form.checkValidity()) {
     form.reportValidity();
     return;
   }
   sendEmail(username, emailAddress, messageText);
-  for (var i of document.getElementsByTagName("input")) {
+  for (const i of document.querySelectorAll('input:not([type="submit"])')) {
     i.value = "";
   }
   message.value = "";
