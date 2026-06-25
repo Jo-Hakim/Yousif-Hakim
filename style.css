@@ -583,6 +583,7 @@ hr {
   #services .content {
     width: 100%;
     height: auto;
+    margin: 0;
   }
   #services .img-container {
     display: none;
