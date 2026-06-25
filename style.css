@@ -554,11 +554,17 @@ hr {
   #home .content {
     width: 90%;
     height: auto;
-    top: auto;
-    bottom: 10px;
+    bottom: 2px;
     left: 5%;
   }
-
+  #home .content h2 {
+    font-size: 25px;
+    font-weight: 100;
+  }
+  #home .content p {
+    font-size: 15px;
+    font-weight: 75;
+  }
   #portfolio .content {
     flex-direction: column;
   }
