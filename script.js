@@ -46,12 +46,17 @@ const username = first.value.trim() + " " + last.value.trim();
 const emailAddress = email.value.trim();
 const messageText = message.value.trim();
 emailjs.init("gsGbOGblQxbLNhJUW");
-function sendEmail(name, email, message) {
-  emailjs.send(serviceID, templateID, {
-    from_name: name,
-    reply_to: email,
-    message: message,
-  });
+async function sendEmail(name, email, message) {
+  try {
+    await emailjs.send(serviceID, templateID, {
+      from_name: name,
+      reply_to: email,
+      message: message,
+    });
+    alert("Your message has been sent");
+  } catch (err) {
+    alert(err);
+  }
 }
 
 var currentCertificate = 0;
