@@ -20,7 +20,7 @@ function showContent(sectionId) {
   }
 }
 document.addEventListener("DOMContentLoaded", function () {
-  setInterval(changeCertificate, 4000);
+  setInterval(changeCertificate, 6000);
 });
 
 function download(app) {
