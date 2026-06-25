@@ -531,9 +531,9 @@ hr {
     padding: 10px;
   }
   .certificate {
-    height: auto;
+    height: max-content;
     background-size: contain;
-    width: 90%;
+    width: max-content;
   }
   header {
     flex-direction: column;
