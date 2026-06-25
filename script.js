@@ -48,14 +48,14 @@ form.addEventListener("submit", function (e) {
 emailjs.init("gsGbOGblQxbLNhJUW");
 async function sendEmail(name, email, message) {
   try {
-    await emailjs.send(serviceID, templateID, {
+    await emailjs.send("service_s2ppzdh", "template_bo778km", {
       from_name: name,
       reply_to: email,
       message: message,
     });
     alert("Your message has been sent");
   } catch (err) {
-    alert(`error is ${err}`);
+    alert(`error is ${JSON.stringify(err)}`);
   }
 }
 

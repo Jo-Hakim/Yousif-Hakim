@@ -536,7 +536,7 @@ hr {
   .certificate {
     height: max-content;
     background-size: contain;
-    width: max-content;
+    width: 90%;
   }
   header {
     flex-direction: column;
@@ -560,7 +560,8 @@ hr {
 
   #home .content {
     width: 90%;
-    height: 400px;
+    position: absolute;
+    height: 300px;
     bottom: 2px;
     left: 5%;
   }
