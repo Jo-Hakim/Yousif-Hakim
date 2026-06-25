@@ -1,6 +1,6 @@
 const sections = ["home", "portfolio", "services", "contact"];
 const form = document.getElementById("message-form"),
-  serviceID = "service_ix4dh1r",
+  serviceID = "service_I3m37wc",
   templateID = "template_bo778km",
   first = document.getElementById("f-name"),
   last = document.getElementById("l-name"),
@@ -36,6 +36,10 @@ form.addEventListener("submit", function (e) {
     return;
   }
   sendEmail(username, emailAddress, messageText);
+  for (var i of document.getElementsByTagName("input")) {
+    i.value = "";
+  }
+  message.value = "";
 });
 
 const username = first.value.trim() + " " + last.value.trim();

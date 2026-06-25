@@ -175,9 +175,9 @@ textarea {
   position: absolute;
   width: 100%;
   margin: 0;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 1200px;
   left: 0;
   border-radius: 7px;
   display: none;
