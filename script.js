@@ -31,6 +31,9 @@ function download(app) {
 }
 form.addEventListener("submit", function (e) {
   e.preventDefault();
+  const username = first.value.trim() + " " + last.value.trim();
+  const emailAddress = email.value.trim();
+  const messageText = message.value.trim();
   if (!form.checkValidity()) {
     form.reportValidity();
     return;
@@ -42,9 +45,6 @@ form.addEventListener("submit", function (e) {
   message.value = "";
 });
 
-const username = first.value.trim() + " " + last.value.trim();
-const emailAddress = email.value.trim();
-const messageText = message.value.trim();
 emailjs.init("gsGbOGblQxbLNhJUW");
 async function sendEmail(name, email, message) {
   try {
@@ -55,7 +55,7 @@ async function sendEmail(name, email, message) {
     });
     alert("Your message has been sent");
   } catch (err) {
-    alert(err);
+    alert(`error is ${err}`);
   }
 }
 
