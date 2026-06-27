@@ -55,7 +55,8 @@ async function sendEmail(name, email, message) {
     await emailjs.send("service_s2ppzdh", "template_bo778km", {
       from_name: name,
       reply_to: email,
-      message: message,
+      message: `From: ${email}
+      ${message} `,
     });
     alert("Your message has been sent");
   } catch (err) {
